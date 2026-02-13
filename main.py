@@ -14,15 +14,19 @@ def cadastrar_usuario():
     usuarios.append(usuario)
     print("✅ Usuário cadastrado com sucesso!\n")
 
+
 def listar_usuarios():
     if not usuarios:
         print("⚠️ Nenhum usuário cadastrado.\n")
         return
 
-    print("\n--- Usuários cadastrados ---")
+    print("\n📋 Lista de usuários:")
     for i, usuario in enumerate(usuarios, start=1):
-        print(f"{i} - Nome: {usuario['nome']} | Email: {usuario['email']} | Idade: {usuario['idade']}")
+        print(f"{i} - Nome: {usuario['nome']}, "
+              f"Email: {usuario['email']}, "
+              f"Idade: {usuario['idade']}")
     print()
+
 
 def menu():
     while True:
@@ -42,5 +46,6 @@ def menu():
         else:
             print("❌ Opção inválida.\n")
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     menu()
